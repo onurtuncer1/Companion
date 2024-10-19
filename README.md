@@ -11,12 +11,12 @@ docker build -t px4-companion-computer .
 ## Run the Docker container
 Once the image is built, you can run it:
 
-''''bash
+```bash
 docker run -it --rm --name companion-computer px4-companion-computer
 
 You may want to connect the container to a simulated PX4 instance using MAVLink. For example, if PX4 is running on your host machine, you can forward ports like this:
 
-'''bash
+```bash
 docker run -it --rm --name companion-computer \
   -p 14550:14550/udp \
   px4-companion-computer
